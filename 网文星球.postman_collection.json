@@ -1,0 +1,2679 @@
+{
+	"info": {
+		"_postman_id": "66c18cfb-3fd3-48b6-99ef-433f143927ed",
+		"name": "网文星球",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "B端",
+			"item": [
+				{
+					"name": "B端手机号登陆",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "13906613964",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/login/web",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"login",
+								"web"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "B端手机号登陆",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "13906613964",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/b/login/web",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"login",
+										"web"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Sep 2020 09:10:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"token\": \"Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "创建/更新书本",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "1",
+									"description": "选填，若是更新书本信息则为必填",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "蜂鸟的小说-02",
+									"description": "书名",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "a.jpg",
+									"description": "封面",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "简介111",
+									"description": "简介",
+									"type": "text"
+								},
+								{
+									"key": "type_id",
+									"value": "1",
+									"description": "小说类型",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "测试1,测试2",
+									"description": "小说的Tag 以逗号分割",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/books/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"books",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "创建/更新书本",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "1",
+											"description": "选填，若是更新书本信息则为必填",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "蜂鸟的小说-02",
+											"description": "书名",
+											"type": "text"
+										},
+										{
+											"key": "cover",
+											"value": "a.jpg",
+											"description": "封面",
+											"type": "text"
+										},
+										{
+											"key": "introduction",
+											"value": "简介111",
+											"description": "简介",
+											"type": "text"
+										},
+										{
+											"key": "type_id",
+											"value": "1",
+											"description": "小说类型",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "测试1,测试2",
+											"description": "小说的Tag 以逗号分割",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/b/books/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"books",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Sep 2020 10:05:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"msg\": \"操作成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "获取书本列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/books/list?page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"books",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "翻页"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取书本列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/books/list?page=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"books",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"description": "翻页"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Sep 2020 10:05:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "299"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 1,\n        \"from\": null,\n        \"next_page_url\": null,\n        \"prev_page_url\": null,\n        \"to\": null,\n        \"data\": [\n            {\n                \"book_id\": 1,\n                \"name\": \"蜂鸟的小说-02\",\n                \"cover\": \"a.jpg\",\n                \"favorite\": 0,\n                \"click\": 0,\n                \"tags\": \"\",\n                \"type_id\": 0,\n                \"introduction\": \"\",\n                \"vip_chapter_row\": 0,\n                \"status\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "获取书本详情",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/books/detail?book_id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"books",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "1",
+									"description": "书本ID"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取书本详情",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/books/detail?book_id=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"books",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "book_id",
+											"value": "1",
+											"description": "书本ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Sep 2020 10:03:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"book_id\": 1,\n        \"name\": \"蜂鸟的小说-01\",\n        \"cover\": \"a.jpg\",\n        \"favorite\": 0,\n        \"click\": 0,\n        \"tags\": \"测试1,测试2\",\n        \"type_id\": 1,\n        \"introduction\": \"简介111\",\n        \"vip_chapter_row\": 0,\n        \"status\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "获取章节列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/chapters/list?page=1&book_id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"chapters",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "book_id",
+									"value": "1",
+									"description": "作品ID"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取章节列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/chapters/list?page=1&book_id=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"chapters",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "book_id",
+											"value": "1",
+											"description": "作品ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Sep 2020 02:26:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "407"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 2,\n        \"from\": null,\n        \"next_page_url\": null,\n        \"prev_page_url\": null,\n        \"to\": null,\n        \"data\": [\n            {\n                \"chapter_id\": 3,\n                \"chapter_no\": 2,\n                \"title\": \"第二章 小猪大战熊猫人\",\n                \"content\": \"\",\n                \"created_at\": \"09-03 17:24\",\n                \"word_number\": 0\n            },\n            {\n                \"chapter_id\": 1,\n                \"chapter_no\": 1,\n                \"title\": \"第一章 小猪大战熊猫人\",\n                \"content\": \"\",\n                \"created_at\": \"09-03 16:59\",\n                \"word_number\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "获取章节详情",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/chapters/detail?chapter_id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"chapters",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "chapter_id",
+									"value": "1",
+									"description": "章节ID"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取章节列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/chapters/list?page=1&book_id=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"chapters",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "book_id",
+											"value": "1",
+											"description": "作品ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Sep 2020 02:26:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "407"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 2,\n        \"from\": null,\n        \"next_page_url\": null,\n        \"prev_page_url\": null,\n        \"to\": null,\n        \"data\": [\n            {\n                \"chapter_id\": 3,\n                \"chapter_no\": 2,\n                \"title\": \"第二章 小猪大战熊猫人\",\n                \"content\": \"\",\n                \"created_at\": \"09-03 17:24\",\n                \"word_number\": 0\n            },\n            {\n                \"chapter_id\": 1,\n                \"chapter_no\": 1,\n                \"title\": \"第一章 小猪大战熊猫人\",\n                \"content\": \"\",\n                \"created_at\": \"09-03 16:59\",\n                \"word_number\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "创建/更新章节",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "chapter_id",
+									"value": "0",
+									"description": "章节ID，为0、空表示新建",
+									"type": "text"
+								},
+								{
+									"key": "book_id",
+									"value": "1",
+									"description": "作品ID，该章节属于哪部作品中",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "第三章 蜂鸟测试章节-001",
+									"description": "章节标题",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "章节内容！！！！！",
+									"description": "内容",
+									"type": "text"
+								},
+								{
+									"key": "chapter_no",
+									"value": "0",
+									"description": "后湍自动生成，若新建章节该字段应该为0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/chapters/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"chapters",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取章节列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q==",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/chapters/list?page=1&book_id=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"chapters",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "book_id",
+											"value": "1",
+											"description": "作品ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Sep 2020 02:26:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "407"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 2,\n        \"from\": null,\n        \"next_page_url\": null,\n        \"prev_page_url\": null,\n        \"to\": null,\n        \"data\": [\n            {\n                \"chapter_id\": 3,\n                \"chapter_no\": 2,\n                \"title\": \"第二章 小猪大战熊猫人\",\n                \"content\": \"\",\n                \"created_at\": \"09-03 17:24\",\n                \"word_number\": 0\n            },\n            {\n                \"chapter_id\": 1,\n                \"chapter_no\": 1,\n                \"title\": \"第一章 小猪大战熊猫人\",\n                \"content\": \"\",\n                \"created_at\": \"09-03 16:59\",\n                \"word_number\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "B端手机号\b创建",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "13486627348",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "9898",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/registered",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"registered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置vip价格",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "2.1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/config/set/price",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"config",
+								"set",
+								"price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置基础信息",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "八角11",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"value": "a.jpg",
+									"type": "text"
+								},
+								{
+									"key": "introduction",
+									"value": "\b湿答答的按时打",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/config/set/base",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"config",
+								"set",
+								"base"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取配置信息",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/config/get",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"config",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vip订单列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/orders/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"orders",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "创建/修改话题",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "话题2",
+									"type": "text"
+								},
+								{
+									"key": "sort",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "topic_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/topic/save",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"topic",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "话题列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/topic/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"topic",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "话题删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "topic_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/topic/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"topic",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取帖子列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/thread/list?page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"thread",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取帖子详情",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/thread/detail?thread_id=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"thread",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "thread_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取帖子详情",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/thread/detail?thread_id=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"thread",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "thread_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Sep 2020 09:44:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"subject\": \"测试帖子！\",\n        \"message\": \"我是内容\",\n        \"total\": {\n            \"likes\": 0,\n            \"comments\": 0\n        },\n        \"user\": {\n            \"nickname\": \"日暮\",\n            \"avatar\": \"http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJzMWMtQmGnoJib1sSyIwLbsYVW8dpeO6k9ibqNcdjksrXEjfEKrpSdicZcNXmFDTeGYOM2Rrkq3ibtMw/132\"\n        },\n        \"topic\": {\n            \"topic_id\": 0,\n            \"name\": \"\",\n            \"sort\": 0,\n            \"created_at\": \"\"\n        }\n    },\n    \"msg\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "获取评论列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/comment/list?thread_id=1&page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"comment",
+								"list"
+							],
+							"query": [
+								{
+									"key": "thread_id",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "获取评论列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Ng3M5WpF2Fx+YlpiB/T9LYxxpqn1xbu8lQV9tZrpty1dtVL9usij0GcOYvvBN/MPH5qJUtvx3bmoWdvwyZQu8Q=="
+									}
+								],
+								"url": {
+									"raw": "{{host}}/b/comment/list?thread_id=1&page=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"b",
+										"comment",
+										"list"
+									],
+									"query": [
+										{
+											"key": "thread_id",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Sep 2020 10:03:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "417"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 1,\n        \"from\": null,\n        \"next_page_url\": null,\n        \"prev_page_url\": null,\n        \"to\": null,\n        \"data\": [\n            {\n                \"user\": {\n                    \"nickname\": \"日暮\",\n                    \"avatar\": \"http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJzMWMtQmGnoJib1sSyIwLbsYVW8dpeO6k9ibqNcdjksrXEjfEKrpSdicZcNXmFDTeGYOM2Rrkq3ibtMw/132\"\n                },\n                \"comment_id\": 1,\n                \"comment_type\": 0,\n                \"message\": \"Hellpo~\",\n                \"created_at\": \"0001-01-01 00:00:00\"\n            }\n        ]\n    },\n    \"msg\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "用户列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/user/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置管理员",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "is_admin",
+									"value": "0",
+									"description": "1是 ,0否",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/user/set/admin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"user",
+								"set",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "\b\b发送短信",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/b/sms/send?phone=13486627348&type=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"sms",
+								"send"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "13486627348"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1用户注册"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "验证短信",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "13486627348",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1:注册",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "3824",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/sms/verify",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"sms",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改密码",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LV9hwFgzrOwsqXI3uIusVNtL7fTaudMVz4PRSADL50WJZdQ7rSBQYeCZSgE9ABcoEA..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "654321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/author/change/password",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"author",
+								"change",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改手机号",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LV9hwFgzrOwsqXI3uIusVNtL7fTaudMVz4PRSADL50WJZdQ7rSBQYeCZSgE9ABcoEA..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "13486627349",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "9898",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/author/change/phone",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"author",
+								"change",
+								"phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除章节",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "chapter_id",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/chapters/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"chapters",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作品类型",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/books/types",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"books",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "置顶帖子",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thread_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "is_top",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/thread/top",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"thread",
+								"top"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作品报表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/books/report?book_id=13&started_at=2020-09-01&ended_at=2020-09-14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"books",
+								"report"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "13"
+								},
+								{
+									"key": "started_at",
+									"value": "2020-09-01"
+								},
+								{
+									"key": "ended_at",
+									"value": "2020-09-14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作品报表总计",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/books/report/total?book_id=13",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"books",
+								"report",
+								"total"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "\b\b作者\b报表总计",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/author/report/total",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"author",
+								"report",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作者报表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/author/report?started_at=2020-09-01&ended_at=2020-09-14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"author",
+								"report"
+							],
+							"query": [
+								{
+									"key": "started_at",
+									"value": "2020-09-01"
+								},
+								{
+									"key": "ended_at",
+									"value": "2020-09-14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除帖子",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thread_id",
+									"value": "28",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/thread/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"thread",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "提现绑定二维码",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/withdraw/bind",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"withdraw",
+								"bind"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "提现绑定\b轮询判断接口",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/withdraw/polling",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"withdraw",
+								"polling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除评论",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment_id",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/comment/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"comment",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "提现接口",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "real_name",
+									"value": "小猪",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/b/withdraw/queue",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"withdraw",
+								"queue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "提现钱包接口",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/withdraw/detail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"withdraw",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "提现记录",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Ng3M5WpF2Fx+YlpiB/T9LY9uCFH8uyits5eT+Le+KoJfZ3BxyJ0boti0Y0DyPoEORse90G2PW6gYZC/4qecL2A==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/b/withdraw/record",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"withdraw",
+								"record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登入/注册二维码",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/b/register/qrcode",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"register",
+								"qrcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "二维码登入/注册轮询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/b/register/polling?scene_id=register1600410003",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"b",
+								"register",
+								"polling"
+							],
+							"query": [
+								{
+									"key": "scene_id",
+									"value": "register1600410003"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "C端",
+			"item": [
+				{
+					"name": "拉起支付（VIP包月）",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9Lf3RwYrwEQLA10wSeCedxNLWvtG5cgW4IwoLV6IfOfR1wFtOXpLOj1MQyZCaDrKNeQ..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/1/payment/monthly/vip",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"1",
+								"payment",
+								"monthly",
+								"vip"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "拉起支付（VIP包月）",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ng3M5WpF2Fx*YlpiB-T9Lf3RwYrwEQLA10wSeCedxNLWvtG5cgW4IwoLV6IfOfR1wFtOXpLOj1MQyZCaDrKNeQ..",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/c/1/payment/monthly/vip",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"c",
+										"1",
+										"payment",
+										"monthly",
+										"vip"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 02:34:51 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"data\": {\n        \"appId\": \"wxb64f05b7aed22823\",\n        \"nonceStr\": \"r2T7X0MDMlL5bFXX\",\n        \"package\": \"prepay_id=wx10103451081470c8fa7336aba1946e0000\",\n        \"signType\": \"MD5\",\n        \"paySign\": \"FD3A86F4E03342A06AFD16E1518A86A3\",\n        \"timestamp\": \"1599705291\"\n    },\n    \"msg\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "作品列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/books/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"books",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作品详情",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/books/detail?book_id=14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"books",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作品的章节列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/chapters/list?book_id=14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"chapters",
+								"list"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "作品的章节详情",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/chapters/detail?chapter_id=9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"chapters",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "chapter_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "帖子列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/thread/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "帖子详情",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/thread/detail?thread_id=3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "thread_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "话题\b列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/topic/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"topic",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "评论列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/comment/list?thread_id=3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"comment",
+								"list"
+							],
+							"query": [
+								{
+									"key": "thread_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "发帖",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "topic_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "type_id",
+									"value": "0",
+									"description": "0:文字帖",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "标题",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "\b内容",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/thread/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "\b创建评论",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "\b2级评论-黑贝",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "thread_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/comment/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"comment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收藏作品接口",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/favorite/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"favorite",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "取消作品收藏",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/favorite/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"favorite",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收藏列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/favorite/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"favorite",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的帖子列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/my/thread/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"my",
+								"thread",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的评论",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/c/6/my/comment/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"my",
+								"comment",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "置顶帖子",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LQFNVEccZTnPjUZ0gGZKJtaksLkxtBSs7lL7TohTlZGyFk7NcJsDv-hBryDKf70nFw..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thread_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "is_top",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/thread/top",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"top"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "置顶列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "topic_id",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/thread/top/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"top",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取微信jsdk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/jssdk/get?uri=https://star.wezan.net/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"jssdk",
+								"get"
+							],
+							"query": [
+								{
+									"key": "uri",
+									"value": "https://star.wezan.net/"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "微贴删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ng3M5WpF2Fx*YlpiB-T9LTh1z4V4xLgisRMjkc9qoIaAXbg-xu3XEn9Vtq9UpweVmv-90zH7k7l*5JRX4b856Q..",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thread_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/thread/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "帖子的点赞",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_like",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "thread_id",
+									"value": "63",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/c/6/thread/like",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "帖子的点赞列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/c/6/thread/like/list?thread_id=64",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"c",
+								"6",
+								"thread",
+								"like",
+								"list"
+							],
+							"query": [
+								{
+									"key": "thread_id",
+									"value": "64"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
